@@ -61,6 +61,13 @@
     .hl-dark { color: #FDBA20; }
     .nav-links-mid a:hover { color: #2C2C2C !important; }
     #setor .info-split:hover, #carteira .info-split:hover, #carteira .mov-item:hover { transform: translateY(0) scale(1); }
+    @media (max-width: 620px) {
+      #sobre .pie-row { justify-content: center; }
+      #sobre .pie-legend { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      #sobre .pie-legend { grid-template-columns: 1fr; }
+    }
     .cta-btn:hover { background: #2BAF3E !important; }
     .cta-btn:active { background: #249936 !important; }
   </style>
@@ -168,35 +175,56 @@
     </div>
     <p style="font-size:12px;color:#5C5C5C;opacity:0.7;margin:0 0 32px">Fonte: Transporte Moderno, julho de 2026</p>
     <div style="max-width:640px;margin:0 auto 24px;background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:32px;padding:32px 36px 24px">
-      <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 20px;text-align:left">Receita total mensal (R$ mil)</p>
-      <div style="display:flex;gap:12px">
-        <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;font-size:11px;color:#5C5C5C;text-align:right">
-          <span>23.000</span><span>22.500</span><span>22.000</span><span>21.500</span><span>21.000</span>
+      <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 6px;text-align:left">Rentabilidade histórica</p>
+      <p style="font-size:13px;color:#5C5C5C;margin:0 0 24px;text-align:left">Evolução do BRCO11 desde o IPO · base 100 em dez/2019</p>
+
+      <div class="rent-highlight" style="display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap;text-align:left;margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid #E2E2E2">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:40px;font-weight:700;color:#2C2C2C;line-height:1">+97,2%</div>
+          <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">rentabilidade total do BRCO11 desde o IPO</p>
         </div>
-        <div style="flex:1;position:relative;height:160px">
-          <div style="position:absolute;left:0;right:0;top:0;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:40px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:80px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:120px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:160px;border-top:1px solid #E2E2E2"></div>
-          <div style="position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-around;padding:0 20px">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
-              <span style="font-size:12px;font-weight:700;color:#2C2C2C">22.311</span>
-              <div style="width:44px;height:105px;background:#2C2C2C;border-radius:6px 6px 0 0"></div>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
-              <span style="font-size:12px;font-weight:700;color:#2C2C2C">22.022</span>
-              <div style="width:44px;height:82px;background:#2C2C2C;border-radius:6px 6px 0 0"></div>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
-              <span style="font-size:12px;font-weight:700;color:#2C2C2C">22.164</span>
-              <div style="width:44px;height:93px;background:#FDBA20;border-radius:6px 6px 0 0"></div>
-            </div>
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#5C5C5C;line-height:1">+30,9%</div>
+          <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">IFIX no mesmo período</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px;text-align:left">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px">
+            <span style="font-size:13px;color:#5C5C5C">Valor da cota ajustada (BRCO11)</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#2C2C2C">197,2</span>
+          </div>
+          <div style="display:flex;height:14px;border-radius:999px;overflow:hidden;background:#F1F1F1">
+            <div style="width:50%;background:#E2E2E2"></div>
+            <div style="width:48.6%;background:#FDBA20"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px">
+            <span style="font-size:13px;color:#5C5C5C">IFIX base 100 desde o IPO</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#2C2C2C">130,9</span>
+          </div>
+          <div style="display:flex;height:14px;border-radius:999px;overflow:hidden;background:#F1F1F1">
+            <div style="width:50%;background:#E2E2E2"></div>
+            <div style="width:15.45%;background:#2C2C2C"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px">
+            <span style="font-size:13px;color:#5C5C5C">Preço de fechamento da cota (BRCO11)</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#2C2C2C">115,0</span>
+          </div>
+          <div style="display:flex;height:14px;border-radius:999px;overflow:hidden;background:#F1F1F1">
+            <div style="width:50%;background:#E2E2E2"></div>
+            <div style="width:7.5%;background:#A8A8A8"></div>
           </div>
         </div>
       </div>
-      <div style="display:flex;justify-content:space-around;padding:8px 20px 0 56px;font-size:12px;color:#5C5C5C">
-        <span>Mai/26</span><span>Jun/26</span><span>Jul/26</span>
+
+      <div style="display:flex;align-items:center;gap:8px;margin-top:18px;font-size:12px;color:#5C5C5C;text-align:left">
+        <span style="width:11px;height:11px;border-radius:2px;background:#E2E2E2;display:inline-block;flex-shrink:0"></span>
+        <span>Base 100 no IPO (dez/2019) · posição em jul/2026</span>
       </div>
     </div>
     <p style="font-size:12px;color:#5C5C5C;opacity:0.7;margin:0 0 24px">Fonte: Relatório Gerencial BRCO11, Julho/2026</p>
@@ -218,31 +246,31 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto 24px">
       <div style="background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:32px;padding:32px;text-align:left">
         <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 20px">Perfil do investidor</p>
-        <div style="display:flex;align-items:center;gap:24px">
+        <div class="pie-row" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
           <div style="position:relative;width:140px;height:140px;border-radius:50%;background:conic-gradient(#FDBA20 0deg 242.4deg,#2C2C2C 242.4deg 317.2deg,#B0B0B0 317.2deg 360deg);flex-shrink:0">
             <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:#fff"></div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:#5C5C5C">
-            <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:2px;background:#FDBA20;display:inline-block;flex-shrink:0"></span>68% Pessoas físicas</div>
-            <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:2px;background:#2C2C2C;display:inline-block;flex-shrink:0"></span>21% Institucionais</div>
-            <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:2px;background:#B0B0B0;display:inline-block;flex-shrink:0"></span>12% Cotistas originais</div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:15px;color:#5C5C5C">
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:12px;height:12px;border-radius:2px;background:#FDBA20;display:inline-block;flex-shrink:0"></span>68% Pessoas físicas</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:12px;height:12px;border-radius:2px;background:#2C2C2C;display:inline-block;flex-shrink:0"></span>21% Institucionais</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:12px;height:12px;border-radius:2px;background:#B0B0B0;display:inline-block;flex-shrink:0"></span>12% Cotistas originais</div>
           </div>
         </div>
       </div>
       <div style="background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:32px;padding:32px;text-align:left">
         <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 20px">Carteira por estado (% ABL)</p>
-        <div style="display:flex;align-items:center;gap:24px">
+        <div class="pie-row" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
           <div style="position:relative;width:140px;height:140px;border-radius:50%;background:conic-gradient(#FDBA20 0deg 183.6deg,#2C2C2C 183.6deg 234deg,#7A7A7A 234deg 277.2deg,#FDD87A 277.2deg 309.6deg,#B5B5B5 309.6deg 331.2deg,#A8741A 331.2deg 345.6deg,#DCDCDC 345.6deg 360deg);flex-shrink:0">
             <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:#fff"></div>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:12px;color:#5C5C5C">
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#FDBA20;display:inline-block;flex-shrink:0"></span>SP 51%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#2C2C2C;display:inline-block;flex-shrink:0"></span>RS 14%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#7A7A7A;display:inline-block;flex-shrink:0"></span>PR 12%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#FDD87A;display:inline-block;flex-shrink:0"></span>MG 9%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#B5B5B5;display:inline-block;flex-shrink:0"></span>RJ 6%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#A8741A;display:inline-block;flex-shrink:0"></span>AL 4%</div>
-            <div style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:2px;background:#DCDCDC;display:inline-block;flex-shrink:0"></span>BA 4%</div>
+          <div class="pie-legend" style="display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;font-size:14px;color:#5C5C5C">
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#FDBA20;display:inline-block;flex-shrink:0"></span>SP 51%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#2C2C2C;display:inline-block;flex-shrink:0"></span>RS 14%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#7A7A7A;display:inline-block;flex-shrink:0"></span>PR 12%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#FDD87A;display:inline-block;flex-shrink:0"></span>MG 9%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#B5B5B5;display:inline-block;flex-shrink:0"></span>RJ 6%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#A8741A;display:inline-block;flex-shrink:0"></span>AL 4%</div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:11px;height:11px;border-radius:2px;background:#DCDCDC;display:inline-block;flex-shrink:0"></span>BA 4%</div>
           </div>
         </div>
       </div>
@@ -381,20 +409,65 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto;text-align:left">
       <div style="background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:20px;padding:22px">
         <h3 style="font-size:20px;font-weight:700;color:#2C2C2C;margin:0 0 16px">Vacância e locatários</h3>
-        <p style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0 0 14px">A vacância física do fundo em julho de 2026 era de <strong style="color:#2C2C2C">5,9%</strong>, recuando para cerca de <strong style="color:#2C2C2C">1,6%</strong> após eventos subsequentes ao fechamento do relatório.</p>
-        <p style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0">O fundo conta com mais de <strong style="color:#2C2C2C">40 locatários</strong>, mais de <strong style="color:#2C2C2C">75%</strong> com alto nível de solidez financeira, entre varejo, alimentos, saúde e logística.</p>
+        <div class="stat-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px 20px">
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">5,9%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">de vacância física em julho de 2026</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">~1,6%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">após eventos subsequentes ao fechamento do relatório</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">+40</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">locatários</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">+75%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">com alto nível de solidez financeira</p>
+          </div>
+        </div>
+        <p style="font-size:14px;line-height:1.7;color:#5C5C5C;margin:20px 0 0;padding-top:16px;border-top:1px solid #E2E2E2">Locatários entre varejo, alimentos, saúde e logística.</p>
       </div>
       <div style="background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:20px;padding:22px">
         <h3 style="font-size:20px;font-weight:700;color:#2C2C2C;margin:0 0 16px">Contratos</h3>
-        <p style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0 0 14px">O prazo médio remanescente dos contratos é de <strong style="color:#2C2C2C">4,6 anos</strong>, com <strong style="color:#2C2C2C">36%</strong> em modalidade atípica e <strong style="color:#2C2C2C">60,3%</strong> dos vencimentos a partir de 2030.</p>
-        <p style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0"><strong style="color:#2C2C2C">99% da carteira</strong> tem reajuste pelo IPCA.</p>
+        <div class="stat-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px 20px">
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">4,6 anos</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">de prazo médio remanescente dos contratos</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">36%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">em modalidade atípica</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">60,3%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">dos vencimentos a partir de 2030</p>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">99%</div>
+            <p style="font-size:13px;line-height:1.5;color:#5C5C5C;margin:6px 0 0">da carteira com reajuste pelo IPCA</p>
+          </div>
+        </div>
       </div>
     </div>
     <div style="max-width:1000px;margin:24px auto 0;background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:20px;padding:22px;text-align:left">
       <h3 style="font-size:20px;font-weight:700;color:#2C2C2C;margin:0 0 18px">Movimentações recentes</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 32px">
-        <p class="mov-item" style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0">Em agosto de 2026, o fundo anunciou a locação de <strong style="color:#2C2C2C">100%</strong> de um de seus imóveis para uma grande operação de e-commerce, envolvendo <strong style="color:#2C2C2C">25.487 m²</strong> por um contrato de <strong style="color:#2C2C2C">5 anos</strong>.</p>
-        <p class="mov-item" style="font-size:14px;line-height:1.75;color:#5C5C5C;margin:0">No mesmo mês, uma nova locação de <strong style="color:#2C2C2C">8.860 m²</strong> para uma empresa do setor alimentício reduziu a vacância daquele imóvel para <strong style="color:#2C2C2C">27%</strong>.</p>
+        <div class="mov-item">
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">25.487 m²</div>
+            <div style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#2C2C2C;background:#FDBA20;border-radius:999px;padding:3px 12px;line-height:1.3">contrato de 5 anos</div>
+          </div>
+          <p style="font-size:13px;line-height:1.6;color:#5C5C5C;margin:10px 0 0">Em agosto de 2026, o fundo anunciou a locação de 100% de um de seus imóveis para uma grande operação de e-commerce.</p>
+        </div>
+        <div class="mov-item">
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+            <div style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:#2C2C2C;line-height:1.1">8.860 m²</div>
+            <div style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#2C2C2C;background:#FDBA20;border-radius:999px;padding:3px 12px;line-height:1.3">vacância para 27%</div>
+          </div>
+          <p style="font-size:13px;line-height:1.6;color:#5C5C5C;margin:10px 0 0">No mesmo mês, uma nova locação para uma empresa do setor alimentício reduziu a vacância daquele imóvel.</p>
+        </div>
       </div>
       <p style="font-size:12px;color:#5C5C5C;opacity:0.7;margin:12px 0 0">Fonte: Fatos Relevantes BRCO11, agosto de 2026</p>
     </div>
@@ -461,7 +534,7 @@
 
   <section id="diferenciais" style="background:transparent;padding:48px 20px;text-align:center">
     <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(28px,6vw,48px);font-weight:600;line-height:1.05;letter-spacing:-1.1px;color:#2C2C2C;margin:0 0 40px">
-      Por que o <span class="hl">BRCO11</span>
+      Por que o <span class="hl">BRCO11</span>?
     </h2>
     <div class="diferenciais-grid" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:24px;max-width:1100px;margin:0 auto">
       <div style="background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:20px;padding:22px;text-align:left">
