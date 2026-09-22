@@ -46,6 +46,16 @@
     @media (max-width: 480px) {
       .perf-stats-grid { grid-template-columns: 1fr !important; }
     }
+    @media (max-width: 560px) {
+      .perf-chart-card { padding: 24px 18px 20px !important; border-radius: 24px !important; }
+    }
+    @media (max-width: 560px) {
+      .hero-stats { grid-template-columns: 1fr !important; gap: 12px !important; margin-bottom: 32px !important; }
+      .hero-stat-card { display: flex !important; flex-wrap: wrap; align-items: center; column-gap: 12px; padding: 16px 18px !important; border-radius: 18px !important; }
+      .hero-stat-card > div:first-child { margin-bottom: 0 !important; }
+      .hero-stat-card > div:nth-child(2) { font-size: 24px !important; margin-bottom: 0 !important; }
+      .hero-stat-card > p { flex-basis: 100%; margin-top: 4px !important; font-size: 13px !important; }
+    }
     .cta-short { display: none; }
     @media (max-width: 480px) {
       .carousel-arrow { width: 32px !important; height: 32px !important; font-size: 15px !important; }
@@ -123,22 +133,22 @@
       Com mais de <strong>R$ 2 bilhões</strong> em patrimônio e <strong>139 mil cotistas</strong>, o BRCO11 investe em galpões logísticos de alto padrão, próximos aos grandes centros urbanos, com renda mensal via locação corrigida majoritariamente pelo IPCA.
     </p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto 40px">
-      <div style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
+    <div class="hero-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto 40px">
+      <div class="hero-stat-card" style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
         <div style="width:32px;height:32px;border-radius:10px;background:#FDBA20;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
           <div style="display:flex;align-items:flex-end;gap:3px;height:18px"><div style="width:4px;height:8px;background:#2C2C2C;border-radius:1px"></div><div style="width:4px;height:14px;background:#2C2C2C;border-radius:1px"></div><div style="width:4px;height:18px;background:#2C2C2C;border-radius:1px"></div></div>
         </div>
         <div style="font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#F9F9F9;line-height:1;margin-bottom:6px">R$ 2,07 bi</div>
         <p style="font-size:14px;color:rgba(249,249,249,0.7);line-height:1.5;margin:0">de patrimônio líquido</p>
       </div>
-      <div style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
+      <div class="hero-stat-card" style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
         <div style="width:32px;height:32px;border-radius:10px;background:#FDBA20;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
           <div style="position:relative;width:22px;height:16px"><div style="position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:#2C2C2C;opacity:0.5"></div><div style="position:absolute;left:8px;top:0;width:16px;height:16px;border-radius:50%;background:#2C2C2C"></div></div>
         </div>
         <div style="font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#F9F9F9;line-height:1;margin-bottom:6px">+139 mil</div>
         <p style="font-size:14px;color:rgba(249,249,249,0.7);line-height:1.5;margin:0">cotistas na B3</p>
       </div>
-      <div style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
+      <div class="hero-stat-card" style="background:rgba(249,249,249,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(249,249,249,0.16);box-shadow:0 8px 24px -8px rgba(0,0,0,0.3);border-radius:24px;padding:32px;text-align:left;{{ cardShadow }}">
         <div style="width:32px;height:32px;border-radius:10px;background:#FDBA20;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
           <div style="width:20px;height:18px;background:#2C2C2C;border-radius:2px;position:relative"><div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:6px;height:8px;background:#FDBA20"></div></div>
         </div>
@@ -303,47 +313,13 @@
     <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(28px,6vw,48px);font-weight:600;line-height:1.05;letter-spacing:-1.1px;color:#2C2C2C;margin:0 0 16px">
       Performance <span class="hl">histórica</span> desde o IPO
     </h2>
-    <div style="max-width:640px;margin:0 auto 16px;background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:32px;padding:32px 36px 16px">
-      <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 8px;text-align:left">Retorno mensal — BRCO11 vs. IFIX</p>
+    <div class="perf-chart-card" style="max-width:640px;margin:0 auto 16px;background:#fff;border:1px solid #E2E2E2;box-shadow:0 4px 16px -4px rgba(44,44,44,0.08);border-radius:32px;padding:32px 36px 24px">
+      <p style="font-size:12.5px;font-weight:600;color:#2C2C2C;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 8px;text-align:left">Retorno acumulado desde o IPO — BRCO11 vs. IFIX</p>
       <div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px">
         <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#5C5C5C"><span style="width:10px;height:10px;border-radius:2px;background:#FDBA20;display:inline-block"></span>BRCO11</div>
         <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#5C5C5C"><span style="width:10px;height:10px;border-radius:2px;background:#A8A8A8;display:inline-block"></span>IFIX</div>
       </div>
-      <div style="display:flex;gap:12px">
-        <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;font-size:11px;color:#5C5C5C;text-align:right">
-          <span>+2%</span><span>+1%</span><span>0%</span><span>-1%</span><span>-2%</span>
-        </div>
-        <div style="flex:1;position:relative;height:160px">
-          <div style="position:absolute;left:0;right:0;top:0;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:40px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:80px;border-top:1px solid #C4C4C4"></div>
-          <div style="position:absolute;left:0;right:0;top:120px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;left:0;right:0;top:160px;border-top:1px dashed #E2E2E2"></div>
-          <div style="position:absolute;inset:0;display:flex;justify-content:space-around;padding:0 10px">
-            <div style="position:relative;width:56px;height:160px">
-              <div style="position:absolute;left:4px;bottom:80px;width:20px;height:30px;background:#FDBA20;border-radius:4px 4px 0 0"></div>
-              <span style="position:absolute;left:4px;bottom:112px;width:20px;text-align:center;font-size:11px;color:#2C2C2C">1,0%</span>
-              <div style="position:absolute;left:30px;top:80px;width:20px;height:39px;background:#A8A8A8;border-radius:0 0 4px 4px"></div>
-              <span style="position:absolute;left:30px;top:121px;width:20px;text-align:center;font-size:11px;color:#5C5C5C">-1,3%</span>
-            </div>
-            <div style="position:relative;width:56px;height:160px">
-              <div style="position:absolute;left:4px;top:80px;width:20px;height:69px;background:#FDBA20;border-radius:0 0 4px 4px"></div>
-              <span style="position:absolute;left:4px;top:151px;width:20px;text-align:center;font-size:11px;color:#5C5C5C">-2,3%</span>
-              <div style="position:absolute;left:30px;top:80px;width:20px;height:36px;background:#A8A8A8;border-radius:0 0 4px 4px"></div>
-              <span style="position:absolute;left:30px;top:118px;width:20px;text-align:center;font-size:11px;color:#5C5C5C">-1,2%</span>
-            </div>
-            <div style="position:relative;width:56px;height:160px">
-              <div style="position:absolute;left:4px;bottom:80px;width:20px;height:36px;background:#FDBA20;border-radius:4px 4px 0 0"></div>
-              <span style="position:absolute;left:4px;bottom:118px;width:20px;text-align:center;font-size:11px;color:#2C2C2C">1,2%</span>
-              <div style="position:absolute;left:30px;top:80px;width:20px;height:9px;background:#A8A8A8;border-radius:0 0 4px 4px"></div>
-              <span style="position:absolute;left:30px;top:91px;width:20px;text-align:center;font-size:11px;color:#5C5C5C">-0,3%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="display:flex;justify-content:space-around;padding:8px 10px 0 56px;font-size:12px;color:#5C5C5C">
-        <span>Mai/26</span><span>Jun/26</span><span>Jul/26</span>
-      </div>
+      <div style="position:relative;width:100%">{{ perfChart }}</div>
     </div>
     <p style="font-size:12px;color:#5C5C5C;opacity:0.7;margin:0 0 32px">Fonte: Relatório Gerencial BRCO11, Julho/2026</p>
     <div class="perf-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto 32px">
@@ -621,8 +597,13 @@ const ASSETS = [
   { label: 'Galpão RS', badge: 'Rio Grande do Sul', img: 'assets/galpao-rs.webp' },
 ];
 
+// Retorno acumulado desde o IPO (04/12/2019) — [data, BRCO11 (com dividendos), IFIX]. Fonte: Performance BRCO.
+const PERF_SERIES = [
+  ['2019-12-04',0,0],['2019-12-11',14.99,1.46],['2019-12-18',16.49,3.27],['2019-12-27',36,8.68],['2020-01-07',35.5,11.09],['2020-01-14',29,9.13],['2020-01-21',32.45,7.19],['2020-01-28',30.57,6.3],['2020-02-04',28.7,4.88],['2020-02-11',30.56,3.57],['2020-02-18',30.16,3.74],['2020-02-27',30.06,1.93],['2020-03-05',28.31,2.66],['2020-03-12',16,-8.74],['2020-03-19',-4.68,-24.31],['2020-03-26',1.88,-16.22],['2020-04-02',12.8,-16.13],['2020-04-09',16.43,-13.58],['2020-04-17',15.57,-12.23],['2020-04-27',16.04,-12.32],['2020-05-05',16.65,-11.27],['2020-05-12',17,-11.49],['2020-05-19',22.25,-11.97],['2020-05-26',23.78,-10.31],['2020-06-02',24.87,-7.25],['2020-06-09',28.55,-4.25],['2020-06-17',27.84,-4.36],['2020-06-24',28.42,-4.44],['2020-07-01',32.62,-3.44],['2020-07-08',27.17,-4.69],['2020-07-15',25.63,-5.83],['2020-07-22',27.89,-6.19],['2020-07-29',29.44,-6.62],['2020-08-05',23.34,-6.71],['2020-08-12',28.88,-6.02],['2020-08-19',27.49,-5.41],['2020-08-26',28.38,-4.79],['2020-09-02',28.83,-4.58],['2020-09-10',30.28,-4.23],['2020-09-17',31.89,-3.99],['2020-09-24',33.81,-4.34],['2020-10-01',28.46,-4.36],['2020-10-08',28,-3.82],['2020-10-16',26.06,-3.41],['2020-10-23',26.17,-3.29],['2020-10-30',28.61,-5.13],['2020-11-09',29.13,-3.89],['2020-11-16',27.57,-3.89],['2020-11-23',26.49,-4.09],['2020-11-30',26.73,-3.69],['2020-12-07',22.72,-4.56],['2020-12-14',21.89,-5.31],['2020-12-21',20.72,-4.17],['2020-12-30',22.31,-1.58],['2021-01-08',21.9,-1.68],['2021-01-15',22.9,-2],['2021-01-22',22.9,-1.83],['2021-02-01',21.35,-1.42],['2021-02-08',21.95,-0.83],['2021-02-17',20.82,-0.72],['2021-02-24',20.07,-0.83],['2021-03-03',19.29,-2.32],['2021-03-10',19.27,-2.83],['2021-03-17',18.26,-3.4],['2021-03-24',18.16,-3.49],['2021-03-31',19.79,-2.38],['2021-04-08',19.65,-2.53],['2021-04-15',19.82,-2.5],['2021-04-23',18.25,-2.46],['2021-04-30',19.61,-1.89],['2021-05-07',19.81,-2.05],['2021-05-14',18.15,-3.09],['2021-05-21',17.17,-3.85],['2021-05-28',16.07,-3.59],['2021-06-07',23.09,-3.04],['2021-06-14',18.84,-3.23],['2021-06-21',17.2,-3.6],['2021-06-28',9.57,-7.22],['2021-07-05',11.6,-5.51],['2021-07-13',18.36,-3.17],['2021-07-20',16.23,-2.63],['2021-07-27',16.72,-3.39],['2021-08-03',16.82,-3.97],['2021-08-10',15.74,-5.51],['2021-08-17',15.49,-7.13],['2021-08-24',12.85,-6.71],['2021-08-31',12.41,-5.71],['2021-09-08',12.43,-6.9],['2021-09-15',11.81,-6.36],['2021-09-22',11,-7.33],['2021-09-29',9.62,-7.4],['2021-10-06',9.8,-7.04],['2021-10-14',12.26,-6.3],['2021-10-21',9.9,-6.56],['2021-10-28',7.01,-8.31],['2021-11-05',5.1,-8.96],['2021-11-12',0.99,-10.24],['2021-11-22',-4.72,-11.48],['2021-11-29',-2.56,-12.09],['2021-12-06',4.3,-9.37],['2021-12-13',8.74,-8.31],['2021-12-20',9.61,-7.59],['2021-12-28',14.18,-5.08],['2022-01-05',12.5,-5.35],['2022-01-12',10.33,-5.21],['2022-01-19',14.56,-3.75],['2022-01-26',8.92,-4.92],['2022-02-02',13.33,-4.98],['2022-02-09',15.13,-5.23],['2022-02-16',14.7,-5.79],['2022-02-23',14.01,-6.41],['2022-03-04',14.86,-5.99],['2022-03-11',10.97,-6.74],['2022-03-18',10.44,-6.76],['2022-03-25',11.41,-5.76],['2022-04-01',14.66,-4.03],['2022-04-08',15.82,-3.68],['2022-04-18',14.77,-3.92],['2022-04-26',16.39,-3.92],['2022-05-03',16.99,-4.16],['2022-05-10',15.35,-5.08],['2022-05-17',15.36,-4.79],['2022-05-24',17.53,-4.29],['2022-05-31',16.38,-3.29],['2022-06-07',15.94,-3.13],['2022-06-14',15.26,-3.94],['2022-06-22',15.25,-3.7],['2022-06-29',14.84,-4.25],['2022-07-06',16.45,-4.38],['2022-07-13',15.74,-4.91],['2022-07-20',15.51,-4.35],['2022-07-27',15.86,-4.17],['2022-08-03',18.24,-3.77],['2022-08-10',19.83,-2.86],['2022-08-17',23.17,0.02],['2022-08-24',24.63,0.44],['2022-08-31',29.71,2.06],['2022-09-08',28.75,1.99],['2022-09-15',31.75,1.89],['2022-09-22',31.99,2.69],['2022-09-29',29.95,1.93],['2022-10-06',31.88,2.72],['2022-10-14',32.6,2.58],['2022-10-21',33,2.84],['2022-10-28',36.1,2.65],['2022-11-07',34.12,2.43],['2022-11-14',27.42,0.51],['2022-11-22',22.5,-1.71],['2022-11-29',20.59,-2.23],['2022-12-06',22.96,-1.19],['2022-12-13',20.36,-3.06],['2022-12-20',15.08,-4.69],['2022-12-27',19.16,-2.81],['2023-01-04',21.12,-2.38],['2023-01-11',20.51,-2.65],['2023-01-18',19.01,-2.66],['2023-01-25',16.54,-3.42],['2023-02-01',16.86,-3.75],['2023-02-08',16.76,-4.05],['2023-02-15',15.52,-4.57],['2023-02-24',16.12,-3.88],['2023-03-03',16.06,-3.26],['2023-03-10',15.24,-4.38],['2023-03-17',15.02,-4.81],['2023-03-24',13.28,-5.01],['2023-03-31',16.18,-5.33],['2023-04-10',18.43,-5.33],['2023-04-17',21.38,-4.08],['2023-04-25',25.7,-3.47],['2023-05-03',28.96,-1.8],['2023-05-10',28.05,-0.04],['2023-05-17',38.99,2.53],['2023-05-24',40.5,2.74],['2023-05-31',43.5,3.33],['2023-06-07',45.83,4.2],['2023-06-15',50.89,5.08],['2023-06-22',50.89,6.28],['2023-06-29',48.78,7.4],['2023-07-06',51.52,8.95],['2023-07-13',51.45,8.99],['2023-07-20',51.52,8.83],['2023-07-27',53.96,8.83],['2023-08-03',58.05,9.79],['2023-08-10',62.81,10.18],['2023-08-17',57.28,9.95],['2023-08-24',61.02,9.39],['2023-08-31',63.15,10.17],['2023-09-08',65.03,11.11],['2023-09-15',66.6,10.9],['2023-09-22',65.91,10.63],['2023-09-29',62.66,10.39],['2023-10-06',62.12,9.15],['2023-10-16',64.78,9.39],['2023-10-23',62.24,8.78],['2023-10-30',61.68,8.22],['2023-11-07',61.72,8.8],['2023-11-14',63.06,9.19],['2023-11-22',62.63,9.03],['2023-11-29',54.25,8.49],['2023-12-06',63.75,9.43],['2023-12-13',59.45,8.94],['2023-12-20',60.16,10.16],['2023-12-28',64.9,13.55],['2024-01-08',67.8,14.09],['2024-01-15',68.11,14.26],['2024-01-22',70.43,14.33],['2024-01-29',68.41,14.16],['2024-02-05',67.47,14.12],['2024-02-14',70.25,14.63],['2024-02-21',66.9,15.08],['2024-02-28',66.21,14.64],['2024-03-06',67.12,15.39],['2024-03-13',66.71,15.47],['2024-03-20',66.52,15.84],['2024-03-27',67.51,16.43],['2024-04-04',67.58,17.08],['2024-04-11',67.45,17.19],['2024-04-18',64.73,16.13],['2024-04-25',64.04,15.24],['2024-05-03',65.65,16.3],['2024-05-10',64.82,16.51],['2024-05-17',64.17,16.32],['2024-05-24',62.94,15.87],['2024-06-03',60.64,15.61],['2024-06-10',59.18,14.71],['2024-06-17',53.68,13.36],['2024-06-24',56.76,13.03],['2024-07-01',57.22,13.8],['2024-07-08',57.46,14.78],['2024-07-15',61.5,15.74],['2024-07-22',66.28,16.28],['2024-07-29',65.42,14.99],['2024-08-05',58.91,14.96],['2024-08-12',65.35,14.95],['2024-08-19',65.82,15.97],['2024-08-26',64.2,16.14],['2024-09-02',62.94,16.22],['2024-09-09',61.79,15.98],['2024-09-16',59.25,15.24],['2024-09-23',57.36,13.57],['2024-09-30',59.51,13.36],['2024-10-07',58.02,12.33],['2024-10-14',55.69,10.7],['2024-10-21',54.35,10.34],['2024-10-28',54.48,9.38],['2024-11-04',52.48,9.29],['2024-11-11',50.3,8.63],['2024-11-19',50.73,8.46],['2024-11-27',54.52,8.75],['2024-12-04',40.78,3.67],['2024-12-11',38.89,1.05],['2024-12-18',41.7,-0.98],['2024-12-27',47.01,6.74],['2025-01-07',46.54,6.81],['2025-01-14',41.84,5.11],['2025-01-21',38.3,3.51],['2025-01-28',38.83,2],['2025-02-04',42.72,2.87],['2025-02-11',41.26,3.02],['2025-02-18',43.15,4.95],['2025-02-25',51.65,6.92],['2025-03-06',51.97,7.7],['2025-03-13',54.47,9.33],['2025-03-20',59.43,11.75],['2025-03-27',59.15,12.68],['2025-04-03',59.35,13.33],['2025-04-10',55.79,11.33],['2025-04-17',61.5,14.3],['2025-04-28',71.91,16.41],['2025-05-06',66.9,16.09],['2025-05-13',67.94,16.99],['2025-05-20',68.17,17.86],['2025-05-27',67.51,17.9],['2025-06-03',66.3,18.44],['2025-06-10',65.21,16.85],['2025-06-17',67.15,17.69],['2025-06-25',67.52,18.04],['2025-07-02',66.83,19.17],['2025-07-09',69.07,19.42],['2025-07-16',71.04,19.17],['2025-07-23',71.55,17.71],['2025-07-30',70.54,17.05],['2025-08-06',66.59,16.73],['2025-08-13',66.53,16.95],['2025-08-20',69.94,17.37],['2025-08-27',71.34,18.01],['2025-09-03',75.65,19.53],['2025-09-10',75.58,20.52],['2025-09-17',79.66,22.19],['2025-09-24',81.02,22.22],['2025-10-01',83.03,22.52],['2025-10-08',81.88,22.67],['2025-10-15',83.86,22.97],['2025-10-22',84.3,22.35],['2025-10-29',84.21,23.09],['2025-11-05',84.66,23.13],['2025-11-12',84.82,23.34],['2025-11-19',85.91,24.12],['2025-11-27',87.26,24.63],['2025-12-04',88.1,26.05],['2025-12-11',88.21,26.12],['2025-12-18',89.07,26.77],['2025-12-29',91.05,29.35],['2026-01-07',91.45,29.65],['2026-01-14',91.81,30.23],['2026-01-21',92.26,30.73],['2026-01-28',92.77,31.97],['2026-02-04',95.44,31.95],['2026-02-11',93.3,31.56],['2026-02-20',94.61,32.67],['2026-02-27',103.35,34.14],['2026-03-06',100.7,33.62],['2026-03-13',100.03,33.03],['2026-03-20',96.59,32.42],['2026-03-27',88.35,32.66],['2026-04-06',91.17,33.28],['2026-04-13',91.02,33.85],['2026-04-20',94.85,35.16],['2026-04-28',96.5,34.58],['2026-05-06',99.96,34.21],['2026-05-13',95.06,31.48],['2026-05-20',95.11,32.02],['2026-05-27',96.22,32.15],['2026-06-03',96.4,31.76],['2026-06-11',93.46,30.39],['2026-06-18',90.73,30.29],['2026-06-25',92.54,30.15],['2026-07-02',93.96,31.45],['2026-07-09',96.18,31.38],['2026-07-16',94.73,31.89],['2026-07-23',92.68,30.44],['2026-07-30',96.05,30.52],['2026-08-06',94.96,28.94],['2026-08-13',91.41,26.62],['2026-08-20',89.31,25.07],['2026-08-27',95.42,27.51],['2026-08-31',96.2,29.03]
+];
+
 class Component extends DCLogic {
-  state = { assetIndex: 0, navExpanded: true, openFaq: 0, typedText: '', twPhrase: 0, twDeleting: false, mobileMenuOpen: false };
+  state = { assetIndex: 0, navExpanded: true, openFaq: 0, typedText: '', twPhrase: 0, twDeleting: false, mobileMenuOpen: false, perfHi: null, perfNarrow: false };
 
   TW_PHRASES = ['galpões mais disputados do país!', 'galpões padrão A+ do Brasil!', 'melhores galpões logísticos do país!'];
 
@@ -702,10 +683,18 @@ class Component extends DCLogic {
     this._collapseY = 0;
     this._onScroll = () => {};
     window.addEventListener('scroll', this._onScroll, { passive: true });
+
+    this._onPerfResize = () => {
+      const n = window.innerWidth <= 560;
+      if (n !== this.state.perfNarrow) this.setState({ perfNarrow: n });
+    };
+    this._onPerfResize();
+    window.addEventListener('resize', this._onPerfResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onPerfResize);
     clearTimeout(this._twTimer);
     clearInterval(this._assetInterval);
     document.removeEventListener('click', this._onAnchorClick);
@@ -723,6 +712,115 @@ class Component extends DCLogic {
 
   _restartAssetAuto() {
     this._startAssetAuto();
+  }
+
+  _perfFmt(v) {
+    return (v >= 0 ? '+' : '') + v.toFixed(1).replace('.', ',') + '%';
+  }
+
+  _perfChart() {
+    const h = window.React.createElement;
+    const FONT = "'Open Sans', system-ui, sans-serif";
+    const narrow = this.state.perfNarrow;
+    const W = narrow ? 340 : 560;
+    const H = narrow ? 236 : 292;
+    const padL = narrow ? 34 : 44;
+    const padR = narrow ? 10 : 14;
+    const padT = narrow ? 22 : 24;
+    const padB = narrow ? 26 : 30;
+    const x0 = padL, x1 = W - padR, y0 = padT, y1 = H - padB;
+    const VMIN = -40, VMAX = 120;
+    const fs = narrow ? 12 : 11;
+    const dotR = narrow ? 4 : 4.5;
+
+    const ts = PERF_SERIES.map(d => Date.parse(d[0]));
+    const t0 = ts[0], tN = ts[ts.length - 1];
+    const X = t => x0 + (t - t0) / (tN - t0) * (x1 - x0);
+    const Y = v => y0 + (VMAX - v) / (VMAX - VMIN) * (y1 - y0);
+    const path = k => PERF_SERIES.map((d, i) => (i ? 'L' : 'M') + X(ts[i]).toFixed(1) + ' ' + Y(d[k]).toFixed(1)).join('');
+
+    const gridEls = [];
+    const yStep = narrow ? 40 : 20;
+    for (let v = VMIN; v <= VMAX; v += yStep) {
+      const y = Y(v);
+      gridEls.push(h('line', { key: 'g' + v, x1: x0, x2: x1, y1: y, y2: y, stroke: '#2C2C2C', strokeOpacity: v === 0 ? 0.35 : 0.1, strokeWidth: 1, strokeDasharray: v === 0 ? undefined : '2 4' }));
+      gridEls.push(h('text', { key: 'yl' + v, x: x0 - 8, y: y + fs * 0.35, textAnchor: 'end', fontSize: fs, fontFamily: FONT, fill: '#5C5C5C' }, (v > 0 ? '+' : '') + v + '%'));
+    }
+
+    const years = narrow ? [2020, 2022, 2024, 2026] : [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+    years.forEach(yr => {
+      const x = X(Date.UTC(yr, 0, 1));
+      gridEls.push(h('line', { key: 'xt' + yr, x1: x, x2: x, y1: y1, y2: y1 + 5, stroke: '#2C2C2C', strokeOpacity: 0.3 }));
+      gridEls.push(h('text', { key: 'xl' + yr, x: x, y: y1 + 5 + fs + 5, textAnchor: 'middle', fontSize: fs, fontFamily: FONT, fill: '#5C5C5C' }, String(yr)));
+    });
+
+    const last = PERF_SERIES[PERF_SERIES.length - 1];
+    const endYB = Y(last[1]), endYI = Y(last[2]);
+    const halo = { paintOrder: 'stroke', stroke: '#fff', strokeWidth: 3.5, strokeLinejoin: 'round' };
+    const endLabels = [
+      h('text', { key: 'eb', x: x1, y: endYB - 10, textAnchor: 'end', fontSize: fs + 3, fontWeight: 700, fontFamily: FONT, fill: '#2C2C2C', style: halo }, this._perfFmt(last[1])),
+      h('text', { key: 'ei', x: x1, y: endYI - 10, textAnchor: 'end', fontSize: fs + 3, fontWeight: 700, fontFamily: FONT, fill: '#7A7A7A', style: halo }, this._perfFmt(last[2])),
+    ];
+
+    const hi = this.state.perfHi;
+    const hovered = hi != null && PERF_SERIES[hi] ? PERF_SERIES[hi] : null;
+    const hoverEls = [];
+    let tip = null;
+    if (hovered) {
+      const hx = X(ts[hi]);
+      hoverEls.push(h('line', { key: 'hv', x1: hx, x2: hx, y1: y0, y2: y1, stroke: '#2C2C2C', strokeOpacity: 0.25 }));
+      hoverEls.push(h('circle', { key: 'hi', cx: hx, cy: Y(hovered[2]), r: dotR, fill: '#A8A8A8', stroke: '#fff', strokeWidth: 1.5 }));
+      hoverEls.push(h('circle', { key: 'hb', cx: hx, cy: Y(hovered[1]), r: dotR, fill: '#FDBA20', stroke: '#fff', strokeWidth: 1.5 }));
+      const p = (hx - x0) / (x1 - x0);
+      const parts = hovered[0].split('-');
+      tip = h('div', {
+        style: {
+          position: 'absolute', top: '0px', left: (p * 100).toFixed(2) + '%',
+          transform: 'translateX(' + (p > 0.6 ? 'calc(-100% - 10px)' : '10px') + ')',
+          background: '#2C2C2C', color: '#F9F9F9', borderRadius: '10px', padding: '10px 12px',
+          fontSize: '12px', lineHeight: '1.5', whiteSpace: 'nowrap', pointerEvents: 'none',
+          boxShadow: '0 8px 20px -8px rgba(44,44,44,0.45)', zIndex: 2,
+        },
+      },
+        h('div', { key: 'd', style: { fontWeight: 600, opacity: 0.7, marginBottom: '4px' } }, parts[2] + '/' + parts[1] + '/' + parts[0]),
+        h('div', { key: 'b', style: { display: 'flex', justifyContent: 'space-between', gap: '14px' } }, h('span', null, 'BRCO11'), h('strong', { style: { color: '#FDBA20' } }, this._perfFmt(hovered[1]))),
+        h('div', { key: 'i', style: { display: 'flex', justifyContent: 'space-between', gap: '14px' } }, h('span', null, 'IFIX'), h('strong', { style: { color: '#D8D8D8' } }, this._perfFmt(hovered[2])))
+      );
+    }
+
+    const pick = (clientX) => {
+      const el = this._perfSvg;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      if (!r.width) return;
+      const vx = (clientX - r.left) / r.width * W;
+      if (vx < x0 - 6 || vx > x1 + 6) { if (hi != null) this.setState({ perfHi: null }); return; }
+      const t = t0 + (vx - x0) / (x1 - x0) * (tN - t0);
+      let best = 0, bd = Infinity;
+      for (let i = 0; i < ts.length; i++) { const dd = Math.abs(ts[i] - t); if (dd < bd) { bd = dd; best = i; } }
+      if (best !== hi) this.setState({ perfHi: best });
+    };
+
+    const svg = h('svg', {
+      viewBox: '0 0 ' + W + ' ' + H,
+      style: { width: '100%', height: 'auto', display: 'block', overflow: 'visible', touchAction: 'pan-y' },
+      ref: el => { this._perfSvg = el; },
+      onMouseMove: e => pick(e.clientX),
+      onMouseLeave: () => { if (this.state.perfHi != null) this.setState({ perfHi: null }); },
+      onTouchStart: e => { if (e.touches[0]) pick(e.touches[0].clientX); },
+      onTouchMove: e => { if (e.touches[0]) pick(e.touches[0].clientX); },
+      onTouchEnd: () => { if (this.state.perfHi != null) this.setState({ perfHi: null }); },
+    },
+      gridEls,
+      h('path', { key: 'pi', d: path(2), fill: 'none', stroke: '#A8A8A8', strokeWidth: narrow ? 1.8 : 2, strokeLinejoin: 'round', strokeLinecap: 'round' }),
+      h('path', { key: 'pb', d: path(1), fill: 'none', stroke: '#FDBA20', strokeWidth: narrow ? 2.2 : 2.4, strokeLinejoin: 'round', strokeLinecap: 'round' }),
+      h('circle', { key: 'ci', cx: x1, cy: endYI, r: dotR, fill: '#A8A8A8' }),
+      h('circle', { key: 'cb', cx: x1, cy: endYB, r: dotR, fill: '#FDBA20' }),
+      endLabels,
+      hoverEls
+    );
+
+    return h(window.React.Fragment, null, svg, tip);
   }
 
   renderVals() {
@@ -776,6 +874,7 @@ class Component extends DCLogic {
 
     return {
       showBar, btnRadius, cardShadow, cards, faqItems,
+      perfChart: this._perfChart(),
       typedText: this.state.typedText,
       navContainerStyle, navExpandedOpacity, navPointerEvents, navCollapsedIconStyle,
       expandNav: () => { if (!this.state.navExpanded) this.setState({ navExpanded: true }); },
